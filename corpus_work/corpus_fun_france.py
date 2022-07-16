@@ -3,33 +3,6 @@ import requests
 
 
 
-
-#url = 'http://archives.aps.sn/'
-#
-#results = requests.get(url)
-#
-#doc = BeautifulSoup(results.text, "html.parser")
-#
-#articles = doc.findAll('article')
-#
-#art = articles[0].find("a")
-#
-#link = art["href"]
-#
-#print(link)
-#
-#art_url = url + link[1:16]
-#
-#art_results = requests.get(art_url)
-#
-#art_doc = BeautifulSoup(art_results.text, "html.parser")
-#
-#paragraph = art_doc.find("p").getText().replace("&amp;nbsp", "_________--------___________-------------").replace("\n","").replace("\t","")
-#
-#print(paragraph.split("&nbsp;"))
-
-
-
 def page_crawler(page_count, no_dups_set):
 	#base url
 	url = 'http://archives.aps.sn/'
@@ -139,10 +112,3 @@ with open("corpus.txt", "w") as f:
 		#now we need to go to the next page with another iteration		
 		page_count += 1
 		counter += 1
-
-
-
-
-#for i in articles:
-	#print(i)
-#print(doc.prettify())
